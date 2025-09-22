@@ -166,3 +166,241 @@
     </div>
   </div>
 </section>
+<!-- Fondo -->
+<section class="min-h-screen bg-gradient-to-br from-purple-600 via-fuchsia-600 to-purple-700 p-4 sm:p-6">
+  <!-- Card -->
+  <div class="mx-auto max-w-6xl grid md:grid-cols-2 gap-6 bg-white rounded-2xl p-4 sm:p-8 shadow-xl">
+    
+    <!-- Columna izquierda: Form -->
+    <form id="registerForm" class="space-y-5">
+      <!-- Logo + título -->
+      <div class="flex items-center gap-3">
+        <img src="/img/logo.png" alt="Logo" class="h-24 w-24 rounded-full ring-2 ring-purple-200">
+        <h1 class=" text-center text-4xl font-semibold">Regístrate</h1>
+      </div>
+      <hr class="border-black/20 -mt-1" />
+
+      <!-- Grid campos -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <!-- Nombre -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Nombre:</label>
+          <div class="relative">
+            <span class="absolute left-3 top-1/2 -translate-y-1/2">
+              <!-- icono usuario -->
+              <svg class="h-5 w-5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M15.75 7.5a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 20.25a8.25 8.25 0 1115 0"/>
+              </svg>
+            </span>
+            <input name="nombre" type="text" placeholder="Nombre" required
+              class="w-full rounded-full border border-purple-300 bg-white/90 pl-10 pr-4 py-2.5 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500/70 focus:border-purple-500">
+          </div>
+        </div>
+
+        <!-- Apellido -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Apellido:</label>
+          <input name="apellido" type="text" placeholder="Apellido" required
+            class="w-full rounded-full border border-purple-300 bg-white/90 px-4 py-2.5 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500/70 focus:border-purple-500">
+        </div>
+
+        <!-- DNI -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Dni:</label>
+          <div class="relative">
+            <span class="absolute left-3 top-1/2 -translate-y-1/2">
+              <svg class="h-5 w-5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M3.75 5.25h16.5m-15 4.5h13.5m-13.5 4.5h10.5M6 19.5h12"/>
+              </svg>
+            </span>
+            <input name="dni" type="text" placeholder="Dni" required pattern="^\d{8}$" title="8 dígitos"
+              class="w-full rounded-full border border-purple-300 bg-white/90 pl-10 pr-4 py-2.5 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500/70 focus:border-purple-500">
+          </div>
+        </div>
+
+        <!-- Teléfono -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Teléfono:</label>
+          <div class="relative">
+            <span class="absolute left-3 top-1/2 -translate-y-1/2">
+              <svg class="h-5 w-5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M2.25 6.75c0 8.01 6.99 15 15 15 .9 0 1.77-.07 2.63-.2a1.5 1.5 0 00.98-2.45l-2.33-2.72a1.5 1.5 0 00-1.62-.44l-2.54.85a12.04 12.04 0 01-5.71-5.71l.85-2.54a1.5 1.5 0 00-.44-1.62L4.9 2.64A1.5 1.5 0 002.45 3.6c-.13.86-.2 1.73-.2 2.63z"/>
+              </svg>
+            </span>
+            <input name="telefono" type="tel" placeholder="Teléfono" pattern="^\d{9}$" title="9 dígitos (ej: 987654321)"
+              class="w-full rounded-full border border-purple-300 bg-white/90 pl-10 pr-4 py-2.5 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500/70 focus:border-purple-500">
+          </div>
+        </div>
+
+        <!-- Género -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Género:</label>
+          <div class="relative">
+            <select name="sexo" required
+              class="w-full appearance-none rounded-full border border-purple-300 bg-white/90 px-4 py-2.5 pr-10 focus:outline-none focus:ring-2 focus:ring-purple-500/70 focus:border-purple-500">
+              <option value="">Seleccione su género</option>
+              <!-- Mapeo: 1 = Masculino, 2 = Femenino, 3 = Otro -->
+              <option value="2">Femenino</option>
+              <option value="1">Masculino</option>
+              <option value="3">Otro</option>
+            </select>
+            <span class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2">
+              <!-- chevron -->
+              <svg class="h-5 w-5 text-purple-600" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z" clip-rule="evenodd"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <!-- Provincia -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Provincia:</label>
+          <div class="relative">
+            <select name="id_provincia" required
+              class="w-full appearance-none rounded-full border border-purple-300 bg-white/90 px-4 py-2.5 pr-10 focus:outline-none focus:ring-2 focus:ring-purple-500/70 focus:border-purple-500">
+              <option value="">Seleccione su provincia</option>
+              <!-- <- Ajusta los valores (ids) si en tu DB son distintos -->
+              <option value="1">Lima</option>
+              <option value="2">Cusco</option>
+              <option value="3">Puno</option>
+              <option value="4">Arequipa</option>
+            </select>
+            <span class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2">
+              <svg class="h-5 w-5 text-purple-600" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z" clip-rule="evenodd"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <!-- Correo -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Correo:</label>
+          <div class="relative">
+            <span class="absolute left-3 top-1/2 -translate-y-1/2">
+              <svg class="h-5 w-5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M3 8l9 6 9-6M4.5 6h15a1.5 1.5 0 011.5 1.5v9A1.5 1.5 0 0119.5 18h-15A1.5 1.5 0 013 16.5v-9A1.5 1.5 0 014.5 6z"/>
+              </svg>
+            </span>
+            <input name="correo" type="email" placeholder="Correo" required
+              class="w-full rounded-full border border-purple-300 bg-white/90 pl-10 pr-4 py-2.5 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500/70 focus:border-purple-500">
+          </div>
+        </div>
+
+        <!-- Contraseña -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Contraseña:</label>
+          <div class="relative">
+            <span class="absolute left-3 top-1/2 -translate-y-1/2">
+              <svg class="h-5 w-5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M16.5 10.5V7.875A4.875 4.875 0 007.5 7.5V10.5m-3 0h15v9a1.5 1.5 0 01-1.5 1.5h-12A1.5 1.5 0 014.5 19.5v-9z"/>
+              </svg>
+            </span>
+            <input name="contrasena" type="password" placeholder="Tu contraseña" required minlength="6"
+              class="w-full rounded-full border border-purple-300 bg-white/90 pl-10 pr-11 py-2.5 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500/70 focus:border-purple-500">
+            <!-- ojo (decorativo) -->
+            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-purple-600">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/>
+                <circle cx="12" cy="12" r="3" stroke-width="1.7"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Checkbox y enlaces -->
+      <label class="flex items-start gap-3 text-sm text-gray-700">
+        <input id="tc" name="tc" type="checkbox" class="mt-1 h-4 w-4 rounded border-purple-300 text-purple-600 focus:ring-purple-500" required>
+        <span>
+          Acepto los <span class="font-semibold">términos y condiciones</span> y la <span class="font-semibold">política de privacidad</span>
+        </span>
+      </label>
+
+      <a href="/login/" class="block text-sm text-purple-700 hover:underline">
+        ¿Ya tiene una cuenta? Inicie sesión
+      </a>
+
+      <!-- Botón -->
+      <button id="submitBtn" type="submit"
+        class="w-full rounded-full bg-gradient-to-r from-purple-700 to-fuchsia-600 text-white py-3 font-semibold hover:opacity-90">
+        Crear Cuenta →
+      </button>
+
+      <!-- Mensajes -->
+      <p id="msg" class="mt-2 text-sm text-center"></p>
+    </form>
+
+    <!-- Columna derecha: Imagen -->
+    <div class="rounded-2xl overflow-hidden">
+      <img src="/img/telas.png" alt="Telas"
+           class="h-full w-full object-cover aspect-[4/3] md:aspect-auto">
+    </div>
+  </div>
+
+  <script type="module">
+    const form = document.getElementById('registerForm');
+    const msgEl = document.getElementById('msg');
+    const submitBtn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      msgEl.textContent = '';
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Registrando...';
+
+      try {
+        const fd = new FormData(form);
+        const payload = {
+          nombre: fd.get('nombre')?.toString().trim(),
+          apellido: fd.get('apellido')?.toString().trim(),
+          dni: fd.get('dni')?.toString().trim(),
+          telefono: fd.get('telefono')?.toString().trim() || null,
+          sexo: fd.get('sexo') ? Number(fd.get('sexo')) : null,
+          id_provincia: fd.get('id_provincia') ? Number(fd.get('id_provincia')) : null,
+          correo: fd.get('correo')?.toString().trim(),
+          contrasena: fd.get('contrasena')?.toString(),
+        };
+
+        // Validaciones rápidas en cliente
+        if (!payload.nombre || !payload.apellido || !payload.dni || !payload.correo || !payload.contrasena || !payload.sexo || !payload.id_provincia) {
+          msgEl.textContent = 'Por favor completa todos los campos obligatorios.';
+          msgEl.className = 'mt-2 text-sm text-center text-red-600';
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Crear Cuenta →';
+          return;
+        }
+
+        const res = await fetch('/api/auth/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+
+        const data = await res.json();
+
+        if (!res.ok) {
+          msgEl.textContent = data.detail || data.error || 'Ocurrió un error en el registro.';
+          msgEl.className = 'mt-2 text-sm text-center text-red-600';
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Crear Cuenta →';
+          return;
+        }
+
+        // éxito
+        msgEl.textContent = '✅ Registro exitoso. Te redirigimos al login...';
+        msgEl.className = 'mt-2 text-sm text-center text-green-600';
+        setTimeout(() => {
+          window.location.href = '/login';
+        }, 1200);
+      } catch (err) {
+        console.error(err);
+        msgEl.textContent = 'Error en el cliente. Revisa la consola.';
+        msgEl.className = 'mt-2 text-sm text-center text-red-600';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Crear Cuenta →';
+      }
+    });
+  </script>
+</section>
